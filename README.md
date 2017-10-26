@@ -1,13 +1,13 @@
-# aamas-paper-template
+# aamas-paper-template [![Build Status](https://travis-ci.org/furushchev/aamas-paper-template.svg)](https://travis-ci.org/furushchev/aamas-paper-template)
 
 Latex template for AAMAS Conference
 
 based on:
+
 - http://www.acm.org/publications/proceedings-template
 - http://celweb.vuse.vanderbilt.edu/aamas18/submissions/
 - http://celweb.vuse.vanderbilt.edu/static/files/aamas18-latex-template.zip
 
-[![Build Status](https://travis-ci.org/furushchev/aamas-paper-template.svg)](https://travis-ci.org/furushchev/aamas-paper-template)
 
 ### 1. Prerequisities
 
@@ -30,22 +30,22 @@ $ make
 - Install [Travis Command Line Tool](https://github.com/travis-ci/travis.rb#installation)
 - Enable Travis
 
-  ```bash
-  travis enable
-  travis setup releases --force
-```
+    ```bash
+    travis enable
+    travis setup releases --force
+    ```
 
 - After `travis` command, configuration like below will be appended to `.travis.yml`.
 
-  ```yaml
-deploy:
-  provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: main.pdf
-  skip_cleanup: true
-  on:
-    tags: true
-```
+    ```yaml
+    deploy:
+      provider: releases
+      api_key: "GITHUB OAUTH TOKEN"
+      file: main.pdf
+      skip_cleanup: true
+      on:
+        tags: true
+    ```
 
 **NOTE** Please make sure you have `skip_cleanup` and `on: tags` is `true`
 
